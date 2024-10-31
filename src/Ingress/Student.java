@@ -3,12 +3,13 @@ package Ingress;
 // sort metodu, find studnet by id, Contains Student by id, Clear All Studnet, Isempty , Update Student, Remove student by id , Add Stident
 // Integer id, Student name , double Grade, Integer age
 public class Student {
-    private String name;
     private Integer id;
-    private Double grade;
+    private String name;
+    private double grade;
     private Integer age;
 
-    public Student(Integer id, String name, Integer age, double grade) {
+    // Constructor
+    public Student(Integer id, String name, double grade, Integer age) {
         this.id = id;
         this.name = name;
         this.grade = grade;
@@ -19,64 +20,43 @@ public class Student {
 
     }
 
-    // Getter və Setter metodları
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getGrade() {
-        return grade;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getAge() {
         return age;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAge(Integer age) {
+
+    }
+
+    public double getGrade() {
+        return grade;
     }
 
     public void setGrade(double grade) {
         this.grade = grade;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
+    // Optionally, override toString for easy display
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", grade=" + grade +
-                ", age=" + age +
-                '}';
+        return "ID: " + id + ", Name: " + name + ", Grade: " + grade + ", Age: " + age;
 
-
-    }
-
-    public void addStudent(Student rasif) {
-    }
-
-    public void displayStudents() {
-    }
-
-    public int findStudentById(int i) {
-
-        return i;
-    }
-
-    public void updateStudent(int i, String rasif, int i1, double v) {
-    }
-
-    public void isEmpty() {
-        return ;
     }
 
 }
-
